@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/manage.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/manageData.js"></script>
+</head>
+<body>
+<div class="top">
+    <h1>TEACH IN CHINA 后台管理系统</h1>
+    <a href="/logout">退出</a>
+</div>
+<div class="main">
+    <div class="list">
+        <div class="tit"><span class="fa fa-list"></span>菜单列表</div>
+        <a href="javascript:;" class="formData">申请表管理</a>
+        <a href="javascript:;" class="pageData">数据管理</a>
+    </div>
+    <div class="index">
+        <div class="content">欢迎登录...</div>
+    </div>
+    <div class="container">
+
+        <div class="user">
+            <div class="box">
+                <div class="search">
+                    <input type="text" id="keyword" placeholder="用户名">
+                    <span class="fa fa-search"></span>
+                    <select name="" class="select">
+                        <option value="全部">全部</option>
+                        <option value="有申请表">有申请表</option>
+                        <option value="无申请表">无申请表</option>
+                    </select>
+                </div>
+                <div class="table">
+
+                </div>
+                <div class='forms'>
+                    <div class='table_box'>
+                        <table cellspacing="0" style="border-collapse: collapse;">
+                            <tr>
+                                <td colspan="4" class="fenlei" style="height:60px;">
+                                    Application Form
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td1">
+                                    FirstName
+                                </td>
+                                <td class="td2" id="firstName">
+                                </td>
+                                <td class="td1">
+                                    MiddleName
+                                </td>
+                                <td class="td2" id="middleName">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    LastName
+                                </td>
+                                <td id="lastName">
+                                </td>
+                                <td>
+                                    NickName
+                                </td>
+                                <td id="nickName">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    BirthDate
+                                </td>
+                                <td id="birthDate">
+                                </td>
+                                <td>
+                                    BirthMonth
+                                </td>
+                                <td id="birthMonth">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    BirthYear
+                                </td>
+                                <td id="birthYear">
+                                </td>
+                                <td>
+                                    Gender
+                                </td>
+                                <td id="gender">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Email
+                                </td>
+                                <td id="email">
+                                </td>
+                                <td>
+                                    Address
+                                </td>
+                                <td id="address">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    City
+                                </td>
+                                <td id="city">
+                                </td>
+                                <td>
+                                    State
+                                </td>
+                                <td id="state">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Country
+                                </td>
+                                <td id="country">
+                                </td>
+                                <td>
+                                    Postal Code
+                                </td>
+                                <td id="code">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Mobile Phone
+                                </td>
+                                <td id="mobilePhone">
+                                </td>
+                                <td>
+                                    Home Phone1
+                                </td>
+                                <td id="homePhone1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Home Phone2
+                                </td>
+                                <td id="homePhone2">
+                                </td>
+                                <td>
+                                    Major
+                                </td>
+                                <td id="major">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fenlei_1" colspan="4">
+                                    Highest Degree Earned
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fenlei_1" colspan="4" id="degree">
+                            </tr>
+                            <tr>
+                                <td class="fenlei_1" colspan="4">
+                                    Your Program Choice
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fenlei_1" colspan="4" id="programChoice">
+                            </tr>
+                            <tr>
+                                <td class="fenlei_1" colspan="4">
+                                    Your School Choice
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fenlei_1" colspan="4" id="schoolChoice">
+                            </tr>
+
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="change_page">
+            <ul>
+                <li class="pgFirst">首页</li>
+                <li class="pgUp">上一页</li>
+                <li>
+                    <span>第</span>
+                    <input type="text" id="page" value="1">
+                    <span>/</span>
+                    <span class="howMany"></span>
+                    <span>页</span>
+                </li>
+
+                <li class="pgDn">下一页</li>
+                <li class="pgEnd">末页</li>
+                <li><span id="goTo">跳转</span></li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">sdfs</div>
+    </div>
+</div>
+</body>
+</html>

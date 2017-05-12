@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial; }
+
+html, body {
+  height: 100%;
+  position: relative; }
+
+ul, li {
+  list-style: none; }
+
+.top {
+  height: 120px;
+  background: #2380f4;
+  line-height: 120px; }
+
+.top h1 {
+  font-size: 40px;
+  color: #eee;
+  padding-left: 20px;
+  float: left;}
+.top a{
+  float: right;
+  color:#fff;
+  width:100px;
+  text-align: center;
+}
+.main {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  top: 120px; }
+
+.main .list {
+  width: 200px;
+  height: 100%;
+  background: #c6e0fb; }
+
+.main .list .tit {
+  height: 80px;
+  font-size: 20px;
+  line-height: 80px;
+  text-align: center; }
+
+.main .list .tit .fa {
+  margin-right: 6px; }
+
+.main .list a {
+  display: block;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  text-decoration: none; }
+
+.main .list a:hover {
+  background: #eee; }
+
+.main .container {
+  position: absolute;
+  background:#fff;
+  display:none;
+  top: 0;
+  right: 0;
+  left: 200px;
+  height: 100%; }
+
+.main .container .box {
+  padding: 30px;
+  overflow: hidden; }
+.index{
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  line-height: 100%;
+  background:#889daf;
+  left: 200px;
+  height: 100%;
+}
+.index .content{
+  height:50px;
+  width:100%;
+  position:absolute;
+  top:50%;
+  margin-top:-25px;
+  color:#fff;
+}
+.home, .form {
+  display: none; }
+
+.dataContainer {
+  display: none; }
+
+.user {
+  position: relative; }
+
+.user .search {
+  height: 40px;
+  overflow: hidden;
+  line-height: 30px; }
+
+.user .search #keyword {
+  height: 30px;
+  width: 180px;
+  text-indent: 0.5em;
+  float: left;
+  border: 1px solid #ccc; }
+
+.search .fa {
+  margin-left: 10px;
+  font-size: 18px;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer; }
+
+.select {
+  height: 30px; }
+
+.select, option {
+  background: none;
+  margin-left: 30px;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  border: none; }
+
+.user .search .search_click {
+  float: left;
+  margin-left: 10px;
+  width: 28px;
+  height: 28px;
+  background-size: 100%;
+  cursor: pointer; }
+
+.user .table {
+  overflow: hidden;
+}
+
+.user .table a{
+  color:#2380f4;
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+.user .table table {
+  border: 1px solid #aaa;
+  border-collapse: collapse;
+  width: 100%; }
+
+.user .table table thead tr {
+  background: #e6eefa;
+  font-size: 16px; }
+
+.user .table table tbody tr:nth-child(even) {
+  background: #f7f9fd; }
+
+.user .table th, .user .table td {
+  padding: 8px 10px; }
+
+table {
+  width:100%;
+  table-layout: fixed; }
+
+tr {
+  height: 36px; }
+
+.table_box tr {
+  height: 40px; }
+
+.th1 {
+  width: 20%; }
+
+.th2 {
+  width: 30%; }
+
+.th3 {
+  width: 30%; }
+
+.th4 {
+  width: 20%; }
+
+
+.fenlei {
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px; }
+
+.fenlei_1 {
+  font-style: italic; }
+
+.td1 {
+  width: 20%; }
+
+.td2 {
+  width: 30%; }
+
+.user .table .especial {
+  padding: 4px 10px; }
+
+.user .table .blue {
+  color: #2c65ff;
+  cursor: pointer; }
+
+.user .table th {
+  text-align: left; }
+
+.change_page {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #f0f6fd;
+  overflow: hidden;
+  height: 50px;
+  line-height: 54px;
+  padding-left: 30px;
+  -webkit-user-select: none; }
+
+.pages{
+  display:none;
+}
+.pages:first-child{
+  display:block;
+}
+.change_page ul {
+  overflow: hidden; }
+
+.change_page li {
+  color: #333;
+  float: left;
+  padding: 0 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 4px; }
+
+.change_page b {
+  font-weight: 100; }
+
+.change_page #page {
+  width: 30px;
+  height: 20px;
+  border: 1px solid #aaa;
+  text-align: center; }
+
+#goTo {
+  background: #2380f4;
+  padding: 3px 12px;
+  color: #fff; }
+
+.change_page .shell #pages {
+  border: none;
+  padding: 0; }
+
+.change_page .shell #pages .page {
+  margin: 0 4px; }
+
+.forms {
+  overflow: scroll;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 200; }
+
+.table_box {
+  position: absolute;
+  top: 60px;
+  width: 60%;
+  padding: 1.5%;
+  background: #fff;
+  left: 50%;
+  margin-left: -30%; }
+  .table_box td {
+    padding-left:6px;
+    border: 1px solid #ccc; }
+
+.exit {
+  cursor: pointer;
+  margin-top: 60px; }
+
+@media screen and (max-width: 1400px) {
+  .table_box {
+    width: 80%;
+    margin-left: -41.5%; } }
+@media screen and (max-width: 1112px) {
+  body {
+    width: 1112px; } }
+

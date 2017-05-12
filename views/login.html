@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/login.js"></script>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="bg">
+  <img src="img/login.jpg" alt="登陆背景" class="bgImg">
+  <div class="mask"></div>
+  <div class="login">
+    <form action="/" method="post">
+      <h1>Teach in China后台管理系统</h1>
+      <div class="ipt">
+        <span class="fa fa-user"></span>
+        <input type="text" name="name" placeholder="请输入账号" class="nameKey">
+      </div>
+      <div class="ipt">
+        <span class="fa fa-key"></span>
+        <input type="text" name="password" placeholder="请输入密码" class="nameKey">
+      </div>
+      <div class="ipt">
+        <input type="text" name="code" placeholder="请输入验证码" class="code">
+        <div class="img"></div>
+      </div>
+      <input type="submit" value="登陆">
+    </form>
+    <%-message%>
+  </div>
+</div>
+</body>
+</html>
