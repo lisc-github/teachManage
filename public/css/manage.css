@@ -25,6 +25,20 @@ ul, li {
   color:#fff;
   width:100px;
   text-align: center;
+  cursor:pointer;
+}
+.goToPage{
+  overflow: hidden;
+}
+.goToPage span{
+  float: left;
+  margin-right:4px;
+}
+.goToPage #page{
+  float: left;
+  margin-top:15px;
+  margin-right:4px;
+
 }
 .main {
   overflow: hidden;
@@ -240,7 +254,7 @@ tr {
   font-weight: 100; }
 
 .change_page #page {
-  width: 30px;
+  width: 36px;
   height: 20px;
   border: 1px solid #aaa;
   text-align: center; }

@@ -2,6 +2,7 @@
  * Created by admin on 2017/4/19.
  */
 $(window).ready(function () {
+    var logout = $("#logout");
     var nav = $(".list a");
     var container = $(".container");
     var forms = $(".forms");
@@ -19,6 +20,7 @@ $(window).ready(function () {
     var select = $(".select");
     var search = $("#keyword");
     var pages;
+    var tr;
 
 
     //翻页
@@ -36,23 +38,23 @@ $(window).ready(function () {
     });
     //左侧列表点击从数据库获取数据
     formData.on('click',function(){
-        pgUp.off('click');
-        pgDn.off('click');
-        pgFirst.off('click');
-        pgEnd.off('click');
-        goTo.off('click');
-        pageIndex.val("1");
-        tables.empty();
+        search.val("");
+        select.val("全部");
+        clear();
+        tables.html("正在加载.....");
         $.ajax({
             url:"http://127.0.0.1:3000/userData",
             type:"post",
             success:function(data){
+                tables.html("");
                 insertData(data);
+                tr = $(".pages tbody tr");
                 pages = $(".pages");
                 jumpPage();
                 getForm();
             }
         })
+
     });
     pageData.on('click',function(){
         $.ajax({
@@ -67,60 +69,70 @@ $(window).ready(function () {
 
     //选择有无申请表功能
     select.on("change",function(){
-        tables.empty();
-        pgUp.off('click');
-        pgDn.off('click');
-        pgFirst.off('click');
-        pgEnd.off('click');
-        goTo.off('click');
-        var _data;
-        if($(this).val()=="有申请表"){
-            _data = 'formYes';
-        }
-        else if($(this).val()=="无申请表"){
-            _data = 'formNo';
-        }
-        else{
-            _data = '';
-        }
-        $.ajax({
-            url:"http://127.0.0.1:3000/userData",
-            type:"post",
-            data:_data,
-            success:function(data){
-                insertData(data);
-                pages = $(".pages");
-                pageIndex.val('1');
-                jumpPage();
-                getForm();
+        search.val("");
+        clear();
+        var arr = [];
+        for(var i=0;i<tr.length;i++){
+            if($(this).val()=="有申请表"){
+                if(tr.eq(i).text().indexOf('预览')!=-1){
+                    arr.push(tr[i]);
+                }
             }
-        })
+            else if($(this).val()=="无申请表"){
+                if(tr.eq(i).text().indexOf('预览')==-1){
+                    arr.push(tr[i]);
+                }
+            }
+            else{
+                arr.push(tr[i]);
+            }
+        }
+        selectData(arr);
+        pages = $(".pages");
+        var length = pages.length;
+        howMany.html(length);
+        jumpPage();
+        getForm();
     });
 
     //搜索功能
     search.on('input',function(){
+        select.val("全部");
+        clear();
+        var keyword = $(this).val();
+        var arr = [];
+        for(var i=0;i<tr.length;i++) {
+            if(tr.eq(i).text().indexOf(keyword)!=-1){
+                arr.push(tr[i]);
+            }
+        }
+        selectData(arr);
+        pages = $(".pages");
+        var length = pages.length;
+        howMany.html(length);
+        jumpPage();
+        getForm();
+    });
+
+    //搜索的方法
+    function selectData(data){
+        for(var i=0;i<data.length;i++){
+            if(i%10==0){
+                var tBody = createTable();
+            }
+            tBody.append(data[i]);
+        }
+    }
+    //清除绑定事件
+    function clear(){
+        pageIndex.val("1");
         tables.empty();
         pgUp.off('click');
         pgDn.off('click');
         pgFirst.off('click');
         pgEnd.off('click');
         goTo.off('click');
-        var keyword = $(this).val();
-        console.log(keyword);
-        $.ajax({
-            url:"http://127.0.0.1:3000/userData",
-            type:"post",
-            data:keyword,
-            success:function(data){
-                insertData(data);
-                pages = $(".pages");
-                pageIndex.val('1');
-                jumpPage();
-                getForm();
-            }
-        })
-    });
-
+    }
 
     //把得到的数据插入页面
     function insertData(data){
@@ -312,5 +324,12 @@ $(window).ready(function () {
             tds.eq(i).css("color","#999");
         }
     });
+
+    //退出前的确认
+    logout.click(function(){
+        if(confirm("确定退出吗？")){
+            window.location.replace("/logout");
+        }
+    })
 
 });

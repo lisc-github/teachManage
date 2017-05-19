@@ -18,7 +18,7 @@ body {
   .bg .login {
     position: absolute;
     width: 700px;
-    height: 420px;
+    height: 424px;
     background: rgba(0, 0, 0, 0.6);
     left: 50%;
     top: 50%;
@@ -85,4 +85,8 @@ body {
       -moz-border-radius: 6px;
       border-radius: 6px;
       cursor: pointer; }
+.message{
+  text-align:center;
+  color:yellow;
+}
 

@@ -12,7 +12,7 @@
 <body>
 <div class="top">
     <h1>TEACH IN CHINA 后台管理系统</h1>
-    <a href="/logout">退出</a>
+    <a id="logout">退出</a>
 </div>
 <div class="main">
     <div class="list">
@@ -28,7 +28,7 @@
         <div class="user">
             <div class="box">
                 <div class="search">
-                    <input type="text" id="keyword" placeholder="用户名">
+                    <input type="text" id="keyword" placeholder="关键字">
                     <span class="fa fa-search"></span>
                     <select name="" class="select">
                         <option value="全部">全部</option>
@@ -36,9 +36,7 @@
                         <option value="无申请表">无申请表</option>
                     </select>
                 </div>
-                <div class="table">
-
-                </div>
+                <div class="table"></div>
                 <div class='forms'>
                     <div class='table_box'>
                         <table cellspacing="0" style="border-collapse: collapse;">
@@ -191,7 +189,7 @@
             <ul>
                 <li class="pgFirst">首页</li>
                 <li class="pgUp">上一页</li>
-                <li>
+                <li class="goToPage">
                     <span>第</span>
                     <input type="text" id="page" value="1">
                     <span>/</span>
